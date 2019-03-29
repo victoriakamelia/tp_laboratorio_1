@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1553799303 source:c:\users\e300ddf\desktop\calculadora\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"biblioteca.h"
+
+1553799585 source:c:\users\e300ddf\desktop\calculadora\biblioteca.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"biblioteca.h"
+
+1553800063 c:\users\e300ddf\desktop\calculadora\biblioteca.h
+
+1553898467 source:c:\users\alumno\desktop\final.calcu\biblioteca.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"biblioteca.h"
+
+1553899057 c:\users\alumno\desktop\final.calcu\biblioteca.h
+
+1553898222 source:c:\users\alumno\desktop\final.calcu\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"biblioteca.h"
+
