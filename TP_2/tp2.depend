@@ -1,0 +1,73 @@
+# depslib dependency file v1.0
+1556218901 source:c:\users\e300ddf\desktop\tp2\tp2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+	<ctype.h>
+	"employee.h"
+
+1556132232 c:\users\e300ddf\desktop\tp2\tp2\employee.h
+
+1556132254 source:c:\users\e300ddf\desktop\tp2\tp2\employee.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+	<ctype.h>
+	"employee.h"
+
+1556316323 source:c:\users\alumno\desktop\1\employee.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+	<ctype.h>
+	"employee.h"
+
+1556132234 c:\users\alumno\desktop\1\employee.h
+
+1556317358 source:c:\users\alumno\desktop\1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+	<ctype.h>
+	"employee.h"
+
+1557071793 source:c:\users\administrator\desktop\ejercicios\1\employee.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+	<ctype.h>
+	"employee.h"
+
+1557071793 c:\users\administrator\desktop\ejercicios\1\employee.h
+
+1557071793 source:c:\users\administrator\desktop\ejercicios\1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+	<ctype.h>
+	"employee.h"
+
+1557103533 source:c:\users\administrator\desktop\trabajos practicos\tp_2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+	<ctype.h>
+	"employee.h"
+
+1557071793 c:\users\administrator\desktop\trabajos practicos\tp_2\employee.h
+
+1557102770 source:c:\users\administrator\desktop\trabajos practicos\tp_2\employee.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+	<ctype.h>
+	"employee.h"
+
