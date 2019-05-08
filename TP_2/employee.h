@@ -17,8 +17,28 @@ typedef struct
 } eSector;
 
 
+char validarSeguir();
+
+int addEmployee(Employee list[], int tam, eSector sector[], int tamSec);
+int bajaEmpleado(Employee emp[],int tam, int id);
+int buscarId(Employee emp[], int tam, int id);
+int buscarIndiceSector(eSector list[], int tam,int id);
+int buscarLibre(Employee list[],int tam);
+int esNumerico(char str[]);
+int esSoloLetras(char str[]);
+int hayEmpleados(Employee list[], int tam);
+int generarId();
+int initEmployees(Employee list[],int tam);
 int menu();
 int menuDos();
-char validarSeguir();
-int initEmployees(Employee list[],int tam);
-int buscarLibre(Employee list[],int tam);
+int mostrarEmpleados(Employee list[], int tam, eSector sector[], int tamSec);
+
+void formatoTexto(Employee list[], int tam);
+void getFloat(Employee list[],int indice, char texto[], char textoError[]);
+void getInt(Employee list[], int indice,char message[],char eMessage[], int lowLimit, int hiLimit);
+void getText(char texto[], char textoError[], char cadena[], int largo);
+void listarDos(Employee list[], int tam, eSector sector[], int tamSec);
+void listarUno(Employee list[], int tam, eSector sector[], int tamSec, Employee aux);
+void mostrarEmpleado(Employee emp, eSector sec[], int tamSec);
+void mostrarSectores(eSector sector[], int tamSec);
+

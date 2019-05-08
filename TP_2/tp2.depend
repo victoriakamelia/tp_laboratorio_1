@@ -71,3 +71,21 @@
 	<ctype.h>
 	"employee.h"
 
+1557344031 source:c:\users\administrator\desktop\trabajos\tp_2\employee.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+	<ctype.h>
+	"employee.h"
+
+1557343944 c:\users\administrator\desktop\trabajos\tp_2\employee.h
+
+1557343944 source:c:\users\administrator\desktop\trabajos\tp_2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+	<ctype.h>
+	"employee.h"
+
