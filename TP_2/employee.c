@@ -54,6 +54,7 @@ int addEmployee(Employee list[], int tam, eSector sector[], int tamSec)
 {
     int retorno=-1;
     int id=generarId();
+    int indice=buscarLibre(list, TAM);
 
     if(buscarLibre(list, tam)==-1)
     {
@@ -62,9 +63,9 @@ int addEmployee(Employee list[], int tam, eSector sector[], int tamSec)
     }
     else
     {
-        getText("I N G R E S E   N O M B R E:", "NOMBRE INGRESADO EXCEDE EL PERMITIDO.\n", list[id].name, 50);
-        getText("I N G R E S E   A P E L L I D O: ", "APELLIDO INGRESADO EXCEDE EL PERMITIDO.\n", list[id].lastName, 50);
-        getFloat(list,id, "I N G R E S E   S A L A R I O: ", "SALARIO DEBE SER MAYOR A CERO.\n");
+        getText("I N G R E S E   N O M B R E: ", "NOMBRE INGRESADO EXCEDE EL PERMITIDO.\n", list[indice].name, 50);
+        getText("I N G R E S E   A P E L L I D O: ", "APELLIDO INGRESADO EXCEDE EL PERMITIDO.\n", list[indice].lastName, 50);
+        getFloat(list,indice, "I N G R E S E   S A L A R I O: ", "SALARIO DEBE SER MAYOR A CERO.\n");
 
         printf("\n________________________________________________________________\n\n");
         printf("S E C T O R E S\n");
@@ -73,7 +74,8 @@ int addEmployee(Employee list[], int tam, eSector sector[], int tamSec)
         printf("\n________________________________________________________________\n\n");
         printf("Empleado id %d generado exitosamente.", id);
 
-        list[id].isEmpty=OCUPADO;
+        list[indice].id=id;
+        list[indice].isEmpty=OCUPADO;
 
 
         retorno=0;
@@ -128,6 +130,7 @@ int buscarId(Employee emp[], int tam, int id)
         if(emp[i].id==id && emp[i].isEmpty == OCUPADO)
         {
             retorno=i;
+
 
             break;
         }
@@ -401,7 +404,7 @@ int mostrarEmpleados(Employee emp[], int tam, eSector sector[], int tamSec)
     int retorno=-1;
     formatoTexto(emp, tam);
     printf("\n________________________________________________________________\n\n");
-    printf("ID           NOMBRE          APELLIDO        SALARIO       ID-S       SECTOR\n");
+    printf("ID           NOMBRE          APELLIDO        SALARIO       ID-S        SECTOR\n");
     for(i=0; i<tam; i++)
     {
         if(emp[i].isEmpty == OCUPADO)
@@ -567,7 +570,7 @@ void getText(char texto[], char textoError[], char cadena[], int largo)
     while(esSoloLetras(auxChar)==0)
     {
         printf("\n________________________________________________________________\n\n");
-        printf("\nSOLO DEBE INGRESAR LETRAS, REINTENTE:");
+        printf("\nSOLO DEBE INGRESAR LETRAS, REINTENTE: ");
         gets(auxChar);
 
     }
@@ -618,7 +621,7 @@ void listarDos(Employee list[], int tam, eSector sector[], int tamSec)
     printf("\n________________________________________________________________\n\n");
     printf("EL PROMEDIO DE LOS SUELDOS ES: %.2f\n\n", promedio);
     printf("\n________________________________________________________________\n\n");
-    printf("LOS EMPLEADOS QUE SU SUELDO SUPERA EL PROMEDIO SON:\n\n");
+    printf("LOS EMPLEADOS QUE SU SUELDO SUPERA EL PROMEDIO SON: \n\n");
 
     for(i=0; i<tam; i++)
     {
@@ -652,13 +655,13 @@ void listarUno(Employee list[], int tam, eSector sector[], int tamSec, Employee 
     {
         for(j=i+1; j < TAM;  j++)
         {
-            if((strcmp(list[i].lastName,list[j].lastName))>0)
+            if(list[i].isEmpty==OCUPADO)
+            {
+                if((strcmp(list[i].lastName,list[j].lastName))>0)
             {
                 aux=list[i];
                 list[i]=list[j];
                 list[j]=aux;
-
-
 
             }
             if((list[i].lastName==list[j].lastName && strcmp(list[i].name,list[j].name))>0)
@@ -666,8 +669,6 @@ void listarUno(Employee list[], int tam, eSector sector[], int tamSec, Employee 
                 aux=list[i];
                 list[i]=list[j];
                 list[j]=aux;
-
-
 
             }
 
@@ -678,8 +679,13 @@ void listarUno(Employee list[], int tam, eSector sector[], int tamSec, Employee 
                 list[j]=aux;
 
             }
+            }
+
         }
     }
+
+    formatoTexto(list, TAM);
+    mostrarEmpleados(list,tam, sector, tamSec);
 }
 
 /**********************************************************************************************************/

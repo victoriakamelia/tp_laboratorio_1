@@ -7,14 +7,14 @@ typedef struct
     float salary;
     int sector;
     int isEmpty;
-} Employee;
+}Employee;
 
 typedef struct
 {
     int idSector;
     char nameSector[30];
 
-} eSector;
+}eSector;
 
 
 char validarSeguir();
