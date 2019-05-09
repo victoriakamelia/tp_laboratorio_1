@@ -72,7 +72,7 @@ int addEmployee(Employee list[], int tam, eSector sector[], int tamSec)
         mostrarSectores(sector,tamSec);
         getInt(list,indice, "I N G R E S E   S E C T O R: ", "SECTOR DEBE SER ENTRE 1 Y 5.\n", 1, 5);
         printf("\n________________________________________________________________\n\n");
-        printf("Empleado id %d generado exitosamente.", id);
+        printf("Empleado id %d generado exitosamente.\n", id);
 
         list[indice].id=id;
         list[indice].isEmpty=OCUPADO;

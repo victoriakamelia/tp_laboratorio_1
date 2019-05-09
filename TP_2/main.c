@@ -52,8 +52,9 @@ int main()
             system("cls");
             if(flag1==0 || hayEmpleados(list, TAM)==0)
             {
-                printf("\n");
-                printf("PARA MODIFICAR EMPLEDOS, PRIMERO DEBE DAR DE ALTA.");
+                printf("________________________________________________________________\n\n");
+                printf("PARA MODIFICAR EMPLEDOS, PRIMERO DEBE DAR DE ALTA.\n");
+                printf("\n________________________________________________________________\n\n");
                 system("pause");
                 break;
             }
@@ -69,6 +70,7 @@ int main()
                 {
                     printf("\n________________________________________________________________\n\n");
                     printf("EL ID DEBE SER NUMERICO.\n");
+                    printf("\n________________________________________________________________\n\n");
                     printf("INGRESE EL ID DEL EMPLEADO A MODIFICAR: ");
                     fflush(stdin);
                     scanf("%s", idStr);
@@ -79,13 +81,15 @@ int main()
                 {
                     printf("\n________________________________________________________________\n\n");
                     printf("EL ID NO PERTENECE A NINGUNO DE LOS EMPLEADOS EXISTENTES.\n");
+                    printf("\n________________________________________________________________\n\n");
                 }
                 else
                 {
                     system("cls");
                     formatoTexto(list, TAM);
                     mostrarEmpleado(list[indice],sectores, TAMSEC);
-                    printf("DESEA MODIFICAR ESTE EMPLEADO?:");
+                    printf("\n________________________________________________________________\n\n");
+                    printf("DESEA MODIFICAR ESTE EMPLEADO?: ");
                     seguir2=validarSeguir();
 
 
@@ -94,16 +98,16 @@ int main()
                         switch(menuDos())
                         {
                         case 1:
-                            getText("I N G R E S E   N O M B R E:", "NOMBRE INGRESADO EXCEDE EL PERMITIDO.\n", list[idModificar].name, 50);
+                            getText("I N G R E S E   N O M B R E: ", "NOMBRE INGRESADO EXCEDE EL PERMITIDO.\n", list[indice].name, 50);
                             break;
                         case 2:
-                            getText("I N G R E S E   A P E L L I D O: ", "APELLIDO INGRESADO EXCEDE EL PERMITIDO.\n", list[idModificar].lastName, 50);
+                            getText("I N G R E S E   A P E L L I D O: ", "APELLIDO INGRESADO EXCEDE EL PERMITIDO.\n", list[indice].lastName, 50);
                             break;
                         case 3:
-                            getFloat(list,idModificar, "I N G R E S E   S A L A R I O: ");
+                            getFloat(list,indice, "I N G R E S E   S A L A R I O: ");
                             break;
                         case 4:
-                            getInt(list,idModificar, "I N G R E S E   S E C T O R: ", "SECTOR DEBE SER ENTRE 1 Y 5.\n", 1, 5);
+                            getInt(list,indice, "I N G R E S E   S E C T O R: ", "SECTOR DEBE SER ENTRE 1 Y 5.\n", 1, 5);
                             break;
                         default:
                             break;
@@ -127,8 +131,9 @@ int main()
             system("cls");
             if(hayEmpleados(list, TAM)==0)
             {
-                printf("\n");
-                printf("PARA DAR DE BAJA EMPLEDOS, PRIMERO DEBE DAR DE ALTA.");
+                printf("________________________________________________________________\n\n");
+                printf("PARA DAR DE BAJA EMPLEDOS, PRIMERO DEBE DAR DE ALTA.\n");
+                printf("\n________________________________________________________________\n\n");
                 system("pause");
                 break;
 
@@ -136,7 +141,7 @@ int main()
             else
             {
                 printf("\n________________________________________________________________\n\n");
-                printf("INGRESE EL ID DEL EMPLEADO A DAR DE BAJA:");
+                printf("INGRESE EL ID DEL EMPLEADO A DAR DE BAJA: ");
                 fflush(stdin);
                 scanf("%s", idStr);
 
@@ -144,7 +149,8 @@ int main()
                 {
                     printf("\n________________________________________________________________\n\n");
                     printf("EL ID DEBE SER NUMERICO.\n");
-                    printf("INGRESE EL ID DEL EMPLEADO A DAR DE BAJA:");
+                    printf("\n________________________________________________________________\n\n");
+                    printf("INGRESE EL ID DEL EMPLEADO A DAR DE BAJA: ");
                     fflush(stdin);
                     scanf("%s", idStr);
                 }
@@ -155,13 +161,15 @@ int main()
                 {
                     printf("\n________________________________________________________________\n\n");
                     printf("EL ID NO PERTENECE A NINGUNO DE LOS EMPLEADO EXISTENTES\n");
+
                 }
                 else
                 {
                     printf("\n________________________________________________________________\n\n");
                     printf("EMPLEADO A DAR DE BAJA: \n");
                     mostrarEmpleado(list[indice], sectores, TAMSEC);
-                    printf("ESTE EMPLEADO SE DARA DE BAJA DE FORMA PERMANENTE.");
+                    printf("\n________________________________________________________________\n\n");
+                    printf("ESTE EMPLEADO SE DARA DE BAJA DE FORMA PERMANENTE.\n");
                     seguir2=validarSeguir();
                     if(seguir2=='S')
                     {
@@ -169,11 +177,13 @@ int main()
                         {
                             printf("\n________________________________________________________________\n\n");
                             printf("NO SE PUDO DAR DE BAJA EL EMPLEADO SOLICITADO.\n");
+                            printf("\n________________________________________________________________\n\n");
                         }
                         else
                         {
                             printf("\n________________________________________________________________\n\n");
-                            printf("EMPLEADO ID %d DADO DE BAJA EXITOSAMENTE.", idBaja);
+                            printf("EMPLEADO ID %d DADO DE BAJA EXITOSAMENTE.\n", idBaja);
+                            printf("\n________________________________________________________________\n\n");
                         }
                     }
                     else
@@ -181,6 +191,7 @@ int main()
 
                         printf("\n________________________________________________________________\n\n");
                         printf("BAJA EMPLEADO CANCELADA.\n");
+                        printf("\n________________________________________________________________\n\n");
                         system("pause");
                         break;
                     }
@@ -198,8 +209,9 @@ int main()
             system("cls");
             if(hayEmpleados(list, TAM)==0)
             {
-                printf("\n________________________________________________________________\n\n");
+                printf("________________________________________________________________\n\n");
                 printf("PARA VER INFORMES PRIMERO DEBE DAR DE ALTA.\n");
+                printf("\n________________________________________________________________\n\n");
                 system("pause");
                 break;
 
@@ -216,6 +228,7 @@ int main()
 
         case 5:
             break;
+            seguir='N';
         default:
             system("cls");
             printf("\n________________________________________________________________\n\n");

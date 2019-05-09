@@ -89,7 +89,7 @@
 	<ctype.h>
 	"employee.h"
 
-1557369413 source:c:\users\administrator\desktop\tp\tp_2\employee.c
+1557441815 source:c:\users\administrator\desktop\tp\tp_2\employee.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -99,7 +99,7 @@
 
 1557364887 c:\users\administrator\desktop\tp\tp_2\employee.h
 
-1557369508 source:c:\users\administrator\desktop\tp\tp_2\main.c
+1557442102 source:c:\users\administrator\desktop\tp\tp_2\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
