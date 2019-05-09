@@ -65,7 +65,7 @@ int addEmployee(Employee list[], int tam, eSector sector[], int tamSec)
     {
         getText("I N G R E S E   N O M B R E: ", "NOMBRE INGRESADO EXCEDE EL PERMITIDO.\n", list[indice].name, 50);
         getText("I N G R E S E   A P E L L I D O: ", "APELLIDO INGRESADO EXCEDE EL PERMITIDO.\n", list[indice].lastName, 50);
-        getFloat(list,indice, "I N G R E S E   S A L A R I O: ", "SALARIO DEBE SER MAYOR A CERO.\n");
+        getFloat(list,indice, "I N G R E S E   S A L A R I O: ");
 
         printf("\n________________________________________________________________\n\n");
         printf("S E C T O R E S\n");
@@ -267,7 +267,7 @@ int hayEmpleados(Employee list[], int tam)
  */
 int generarId()
 {
-    static int id=0;
+    static int id=1000;
 
     return id++;
 }
@@ -306,44 +306,44 @@ int initEmployees(Employee list[],int tam)
  */
 int menu()
 {
-        int opcion;
-        char opcionStr[20];
+    int opcion;
+    char opcionStr[20];
 
-        system("cls");
-        system("color 57");
-        printf("   .-.     .-.     .-.     .-.     .-.     .-.     .-.     .-.     .-. \n");
-        printf(" .'   `._.'   `._.'   `._.'   `._.'   `._.'   `._.'   `._.'   `._.'   `.\n");
-        printf("(    .     .-.     .-.     .-.     .-.     .-.     .-.     .-.     .    )\n");
-        printf(" `.   `._.'   `._.'   `._.'   `._.'   `._.'   `._.'   `._.'   `._.'   .'\n");
-        printf("   )    )                                                       (    (\n");
-        printf(" ,'   ,'             M E N U   D E   O P C I O N E S.            `.   `.\n");
-        printf("(    (                                                             )    )\n");
-        printf(" `.   `.                   1)ALTA EMPLEADO.                      .'   .' \n");
-        printf("   )    )                                                      (    (\n");
-        printf(" ,'   ,'                   2)MODIFICAR EMPLEADO.                `.   `.\n");
-        printf("(    (                                                            )    )\n");
-        printf(" `.   `.                   3)BAJA EMPLEADO.                      .'   .' \n");
-        printf("   )    )                                                      (    (\n");
-        printf(" ,'   ,'                   4)INFORMES.                          `.   `.\n");
-        printf("(    (                                                            )    )\n");
-        printf(" `.   `.                   5)SALIR.                              .'   .' \n");
-        printf("   )    )       _       _       _       _       _       _       (    (\n");
-        printf(" ,'   .' `.   .' `.   .' `.   .' `.   .' `.   .' `.   .' `.   .' `.   `.\n");
-        printf("(    '  _  `-'  _  `-'  _  `-'  _  `-'  _  `-'  _  `-'  _  `-'  _  `    )\n");
-        printf("`.   .' `.   .' `.   .' `.   .' `.   .' `.   .' `.   .' `.   .' `.   .'\n");
-        printf("  `-'     `-'     `-'     `-'     `-'     `-'     `-'     `-'     `-'\n");
-        printf("->->->->->->->->->->->->->->->->-->->->-INGRESE OPCION SELECCIONADA: ");
-        scanf("%s", opcionStr);
-        printf("\n\n\n");
-        while(esNumerico(opcionStr)==0)
-        {
+    system("cls");
+    system("color 57");
+    printf("   .-.     .-.     .-.     .-.     .-.     .-.     .-.     .-.     .-. \n");
+    printf(" .'   `._.'   `._.'   `._.'   `._.'   `._.'   `._.'   `._.'   `._.'   `.\n");
+    printf("(    .     .-.     .-.     .-.     .-.     .-.     .-.     .-.     .    )\n");
+    printf(" `.   `._.'   `._.'   `._.'   `._.'   `._.'   `._.'   `._.'   `._.'   .'\n");
+    printf("   )    )                                                       (    (\n");
+    printf(" ,'   ,'             M E N U   D E   O P C I O N E S.            `.   `.\n");
+    printf("(    (                                                             )    )\n");
+    printf(" `.   `.                   1)ALTA EMPLEADO.                      .'   .' \n");
+    printf("   )    )                                                      (    (\n");
+    printf(" ,'   ,'                   2)MODIFICAR EMPLEADO.                `.   `.\n");
+    printf("(    (                                                            )    )\n");
+    printf(" `.   `.                   3)BAJA EMPLEADO.                      .'   .' \n");
+    printf("   )    )                                                      (    (\n");
+    printf(" ,'   ,'                   4)INFORMES.                          `.   `.\n");
+    printf("(    (                                                            )    )\n");
+    printf(" `.   `.                   5)SALIR.                              .'   .' \n");
+    printf("   )    )       _       _       _       _       _       _       (    (\n");
+    printf(" ,'   .' `.   .' `.   .' `.   .' `.   .' `.   .' `.   .' `.   .' `.   `.\n");
+    printf("(    '  _  `-'  _  `-'  _  `-'  _  `-'  _  `-'  _  `-'  _  `-'  _  `    )\n");
+    printf("`.   .' `.   .' `.   .' `.   .' `.   .' `.   .' `.   .' `.   .' `.   .'\n");
+    printf("  `-'     `-'     `-'     `-'     `-'     `-'     `-'     `-'     `-'\n");
+    printf("->->->->->->->->->->->->->->->->-->->->-INGRESE OPCION SELECCIONADA: ");
+    scanf("%s", opcionStr);
+    printf("\n\n\n");
+    while(esNumerico(opcionStr)==0)
+    {
         printf("->->->->->->->->->->->->->-LA OPCION SELECCIONADA DEBE SER NUMERICA: ");
         fflush(stdin);
         scanf("%s", opcionStr);
-        }
-        opcion=atoi(opcionStr);
+    }
+    opcion=atoi(opcionStr);
 
-        return opcion;
+    return opcion;
 }
 
 /**********************************************************************************************************/
@@ -356,33 +356,33 @@ int menu()
 int menuDos()
 {
     int opcion;
-        system("cls");
-        system("color 57");
-        printf("   .-.     .-.     .-.     .-.     .-.     .-.     .-.     .-.     .-. \n");
-        printf(" .'   `._.'   `._.'   `._.'   `._.'   `._.'   `._.'   `._.'   `._.'   `.\n");
-        printf("(    .     .-.     .-.     .-.     .-.     .-.     .-.     .-.     .    )\n");
-        printf(" `.   `._.'   `._.'   `._.'   `._.'   `._.'   `._.'   `._.'   `._.'   .'\n");
-        printf("   )    )                                                       (    (\n");
-        printf(" ,'   ,'       M E N U   D E   M O D I F I C A C I O N E S.      `.   `.\n");
-        printf("(    (                                                             )    )\n");
-        printf(" `.   `.                   1)Modificar Nombre.                   .'   .' \n");
-        printf("   )    )                                                      (    (\n");
-        printf(" ,'   ,'                   2)Modificer apellido.                `.   `.\n");
-        printf("(    (                                                            )    )\n");
-        printf(" `.   `.                   3)Modificar salario.                 .'   .' \n");
-        printf("   )    )                                                      (    (\n");
-        printf(" ,'   ,'                   4)Modificer sector.                  `.   `.\n");
-        printf("(    (                                                            )    )\n");
-        printf(" `.   `.                                                         .'   .' \n");
-        printf("   )    )       _       _       _       _       _       _       (    (\n");
-        printf(" ,'   .' `.   .' `.   .' `.   .' `.   .' `.   .' `.   .' `.   .' `.   `.\n");
-        printf("(    '  _  `-'  _  `-'  _  `-'  _  `-'  _  `-'  _  `-'  _  `-'  _  `    )\n");
-        printf("`.   .' `.   .' `.   .' `.   .' `.   .' `.   .' `.   .' `.   .' `.   .'\n");
-        printf("  `-'     `-'     `-'     `-'     `-'     `-'     `-'     `-'     `-'\n");
-        printf("->->->->->->->->->->->->->->->->-->->->-INGRESE OPCION SELECCIONADA: ");
-        scanf("%d",&opcion);
+    system("cls");
+    system("color 57");
+    printf("   .-.     .-.     .-.     .-.     .-.     .-.     .-.     .-.     .-. \n");
+    printf(" .'   `._.'   `._.'   `._.'   `._.'   `._.'   `._.'   `._.'   `._.'   `.\n");
+    printf("(    .     .-.     .-.     .-.     .-.     .-.     .-.     .-.     .    )\n");
+    printf(" `.   `._.'   `._.'   `._.'   `._.'   `._.'   `._.'   `._.'   `._.'   .'\n");
+    printf("   )    )                                                       (    (\n");
+    printf(" ,'   ,'       M E N U   D E   M O D I F I C A C I O N E S.      `.   `.\n");
+    printf("(    (                                                             )    )\n");
+    printf(" `.   `.                   1)Modificar Nombre.                   .'   .' \n");
+    printf("   )    )                                                      (    (\n");
+    printf(" ,'   ,'                   2)Modificer apellido.                `.   `.\n");
+    printf("(    (                                                            )    )\n");
+    printf(" `.   `.                   3)Modificar salario.                 .'   .' \n");
+    printf("   )    )                                                      (    (\n");
+    printf(" ,'   ,'                   4)Modificer sector.                  `.   `.\n");
+    printf("(    (                                                            )    )\n");
+    printf(" `.   `.                                                         .'   .' \n");
+    printf("   )    )       _       _       _       _       _       _       (    (\n");
+    printf(" ,'   .' `.   .' `.   .' `.   .' `.   .' `.   .' `.   .' `.   .' `.   `.\n");
+    printf("(    '  _  `-'  _  `-'  _  `-'  _  `-'  _  `-'  _  `-'  _  `-'  _  `    )\n");
+    printf("`.   .' `.   .' `.   .' `.   .' `.   .' `.   .' `.   .' `.   .' `.   .'\n");
+    printf("  `-'     `-'     `-'     `-'     `-'     `-'     `-'     `-'     `-'\n");
+    printf("->->->->->->->->->->->->->->->->-->->->-INGRESE OPCION SELECCIONADA: ");
+    scanf("%d",&opcion);
 
-        return opcion;
+    return opcion;
 
 
 }
@@ -417,6 +417,60 @@ int mostrarEmpleados(Employee emp[], int tam, eSector sector[], int tamSec)
     return retorno;
 
 }
+
+/**********************************************************************************************************/
+
+/** \brief recibe una cadena y valida que sea flotante con punto.
+ *
+ * \param str[] char con la cadena a validar.
+ * \return int -1 si no es un flotante con punto o 0 si lo es.
+ *
+ */
+int validarFloat(char str[])
+{
+    int i;
+    int tam=strlen(str);
+    int cont=0;
+    float positivo;
+
+    for(i=0; i<tam; i++)
+    {
+        if((str[i] < '0' || str[i] > '9' ) && (str[i] != '.'))
+        {
+
+            return -1;
+            break;
+
+        }
+        else if(str[i] == '.')
+        {
+            cont++;
+
+        }
+
+        if(cont>1)
+        {
+            return -1;
+            break;
+        }
+
+    }
+
+    positivo=atof(str);
+
+    if(positivo<=0)
+    {
+        return -1;
+
+    }
+    else
+    {
+        return 0;
+    }
+
+
+}
+
 
 /**********************************************************************************************************/
 
@@ -481,26 +535,32 @@ void formatoTexto(Employee list[], int tam)
  * \param list[] Employee con el array de empleados en donde se guardará el dato solicitado,¿,
  * \param indice int con el indice en donde se guardara el dato solicitado.
  * \param texto[] char con el tecto para pedir al usuario el ingreso.
- * \param textoError[] char con el texto en caso de que el usuario ingrese un dato que no cumpla con las condiciones.
  * \return void
  *
  */
-void getFloat(Employee list[],int indice, char texto[], char textoError[])
+void getFloat(Employee list[],int indice, char texto[])
 {
     float sueldo;
+    char str[100];
 
     printf("\n________________________________________________________________\n\n");
     printf("\n%s", texto);
-    scanf("%f", &sueldo);
+    fflush(stdin);
+    scanf("%s", str);
 
-
-
-    while(sueldo<=0)
+    while(validarFloat(str)==-1)
     {
         printf("\n________________________________________________________________\n\n");
-        printf("\n%s", textoError);
-
+        printf("SUELDO DEBE TENER FORMATO ENTERO (1234) O FLOTANTE CON PUNTO (1234.56)\n\n");
+        printf("SUELDO DEBE SER MAYOR A CERO, REINTENTE: \n");
+        printf("\n________________________________________________________________\n\n");
+        printf("\n%s", texto);
+        fflush(stdin);
+        scanf("%s", str);
     }
+
+    sueldo=atof(str);
+
 
     list[indice].salary=sueldo;
 }
@@ -605,6 +665,7 @@ void listarDos(Employee list[], int tam, eSector sector[], int tamSec)
     float total=0;
     float promedio;
     int contador=0;
+    int contador2=0;
 
     for(i=0; i<tam; i++)
     {
@@ -627,11 +688,28 @@ void listarDos(Employee list[], int tam, eSector sector[], int tamSec)
     {
         if(list[i].isEmpty==OCUPADO && list[i].salary>promedio)
         {
-            formatoTexto(list, tam);
-            mostrarEmpleado(list[i], sector, tamSec);
+            contador2++;
         }
 
     }
+
+    if(contador2 >0)
+    {
+        for(i=0; i<tam; i++)
+        {
+            if(list[i].isEmpty==OCUPADO && list[i].salary>promedio)
+            {
+                formatoTexto(list, tam);
+                mostrarEmpleado(list[i], sector, tamSec);
+            }
+
+        }
+    }else
+    {
+        printf("\n________________________________________________________________\n\n");
+        printf("NO HAY EMPLEADOS QUE SU SUELDO SUPERE EL PROMEDIO.\n\n");
+    }
+
 }
 
 /**********************************************************************************************************/
@@ -658,27 +736,27 @@ void listarUno(Employee list[], int tam, eSector sector[], int tamSec, Employee 
             if(list[i].isEmpty==OCUPADO)
             {
                 if((strcmp(list[i].lastName,list[j].lastName))>0)
-            {
-                aux=list[i];
-                list[i]=list[j];
-                list[j]=aux;
+                {
+                    aux=list[i];
+                    list[i]=list[j];
+                    list[j]=aux;
 
-            }
-            if((list[i].lastName==list[j].lastName && strcmp(list[i].name,list[j].name))>0)
-            {
-                aux=list[i];
-                list[i]=list[j];
-                list[j]=aux;
+                }
+                if((list[i].lastName==list[j].lastName && strcmp(list[i].name,list[j].name))>0)
+                {
+                    aux=list[i];
+                    list[i]=list[j];
+                    list[j]=aux;
 
-            }
+                }
 
-            if(list[i].sector>list[j].sector)
-            {
-                aux=list[i];
-                list[i]=list[j];
-                list[j]=aux;
+                if(list[i].sector>list[j].sector)
+                {
+                    aux=list[i];
+                    list[i]=list[j];
+                    list[j]=aux;
 
-            }
+                }
             }
 
         }

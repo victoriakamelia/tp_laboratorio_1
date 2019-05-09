@@ -100,7 +100,7 @@ int main()
                             getText("I N G R E S E   A P E L L I D O: ", "APELLIDO INGRESADO EXCEDE EL PERMITIDO.\n", list[idModificar].lastName, 50);
                             break;
                         case 3:
-                            getFloat(list,idModificar, "I N G R E S E   S A L A R I O: ", "SALARIO DEBE SER MAYOR A CERO.\n");
+                            getFloat(list,idModificar, "I N G R E S E   S A L A R I O: ");
                             break;
                         case 4:
                             getInt(list,idModificar, "I N G R E S E   S E C T O R: ", "SECTOR DEBE SER ENTRE 1 Y 5.\n", 1, 5);
@@ -163,9 +163,9 @@ int main()
                     mostrarEmpleado(list[indice], sectores, TAMSEC);
                     printf("ESTE EMPLEADO SE DARA DE BAJA DE FORMA PERMANENTE.");
                     seguir2=validarSeguir();
-                    if(seguir2=='S')
+                    if(seguir2=='s')
                     {
-                        if(bajaEmpleado(list, TAM, indice)==-1)
+                        if(bajaEmpleado(list, TAM, idBaja)==-1)
                         {
                             printf("\n________________________________________________________________\n\n");
                             printf("NO SE PUDO DAR DE BAJA EL EMPLEADO SOLICITADO.\n");
@@ -211,6 +211,9 @@ int main()
             }
 
             seguir=validarSeguir();
+            break;
+
+        case 5:
             break;
         default:
             system("cls");

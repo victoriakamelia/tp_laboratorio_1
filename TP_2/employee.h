@@ -32,9 +32,10 @@ int initEmployees(Employee list[],int tam);
 int menu();
 int menuDos();
 int mostrarEmpleados(Employee list[], int tam, eSector sector[], int tamSec);
+int validarFloat(char str[]);
 
 void formatoTexto(Employee list[], int tam);
-void getFloat(Employee list[],int indice, char texto[], char textoError[]);
+void getFloat(Employee list[],int indice, char texto[]);
 void getInt(Employee list[], int indice,char message[],char eMessage[], int lowLimit, int hiLimit);
 void getText(char texto[], char textoError[], char cadena[], int largo);
 void listarDos(Employee list[], int tam, eSector sector[], int tamSec);

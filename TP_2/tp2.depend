@@ -71,7 +71,7 @@
 	<ctype.h>
 	"employee.h"
 
-1557350083 source:c:\users\administrator\desktop\trabajos\tp_2\employee.c
+1557367975 source:c:\users\administrator\desktop\trabajos\tp_2\employee.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -79,9 +79,9 @@
 	<ctype.h>
 	"employee.h"
 
-1557350339 c:\users\administrator\desktop\trabajos\tp_2\employee.h
+1557364887 c:\users\administrator\desktop\trabajos\tp_2\employee.h
 
-1557350339 source:c:\users\administrator\desktop\trabajos\tp_2\main.c
+1557365217 source:c:\users\administrator\desktop\trabajos\tp_2\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
