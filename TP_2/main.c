@@ -163,7 +163,7 @@ int main()
                     mostrarEmpleado(list[indice], sectores, TAMSEC);
                     printf("ESTE EMPLEADO SE DARA DE BAJA DE FORMA PERMANENTE.");
                     seguir2=validarSeguir();
-                    if(seguir2=='s')
+                    if(seguir2=='S')
                     {
                         if(bajaEmpleado(list, TAM, idBaja)==-1)
                         {
@@ -193,6 +193,7 @@ int main()
 
             seguir=validarSeguir();
             break;
+
         case 4:
             system("cls");
             if(hayEmpleados(list, TAM)==0)

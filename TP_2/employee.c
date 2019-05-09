@@ -70,7 +70,7 @@ int addEmployee(Employee list[], int tam, eSector sector[], int tamSec)
         printf("\n________________________________________________________________\n\n");
         printf("S E C T O R E S\n");
         mostrarSectores(sector,tamSec);
-        getInt(list,id, "I N G R E S E   S E C T O R: ", "SECTOR DEBE SER ENTRE 1 Y 5.\n", 1, 5);
+        getInt(list,indice, "I N G R E S E   S E C T O R: ", "SECTOR DEBE SER ENTRE 1 Y 5.\n", 1, 5);
         printf("\n________________________________________________________________\n\n");
         printf("Empleado id %d generado exitosamente.", id);
 
@@ -179,17 +179,16 @@ int buscarLibre(Employee list[],int tam)
 {
     int retorno = -1;
     int i;
-    if(tam > 0 && list != NULL)
-    {
+
         for(i=0; i<tam; i++)
         {
-            if(list[i].isEmpty == 0)
+            if(list[i].isEmpty == VACIO)
             {
                 retorno = i;
                 break;
             }
         }
-    }
+
     return retorno;
 }
 
