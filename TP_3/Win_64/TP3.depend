@@ -102,3 +102,52 @@
 	"funciones.h"
 	"Controller.h"
 
+1560551625 source:c:\users\alumno\desktop\tps\tp_3\win_64\controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+	"parser.h"
+	"funciones.h"
+	"controller.h"
+
+1560546664 c:\users\alumno\desktop\tps\tp_3\win_64\linkedlist.h
+
+1560547086 c:\users\alumno\desktop\tps\tp_3\win_64\employee.h
+
+1560546664 c:\users\alumno\desktop\tps\tp_3\win_64\parser.h
+
+1560547086 c:\users\alumno\desktop\tps\tp_3\win_64\funciones.h
+
+1560547086 c:\users\alumno\desktop\tps\tp_3\win_64\controller.h
+
+1560547086 source:c:\users\alumno\desktop\tps\tp_3\win_64\employee.c
+	"Employee.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"funciones.h"
+
+1560547086 source:c:\users\alumno\desktop\tps\tp_3\win_64\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"funciones.h"
+
+1560551183 source:c:\users\alumno\desktop\tps\tp_3\win_64\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+	"funciones.h"
+
+1560547222 source:c:\users\alumno\desktop\tps\tp_3\win_64\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+	"funciones.h"
+	"Controller.h"
+

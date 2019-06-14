@@ -249,13 +249,15 @@ int controller_ListEmployee(LinkedList* pArrayListEmployee)
         auxiliarPunteroEmployee = employee_new();
 
         lenList = ll_len(pArrayListEmployee);
-        printf("\nID:  - NOMBRE:               - HORAS: - SUELDO:");
+        printf("ID:  - NOMBRE:               - HORAS: - SUELDO:");
         for(i=0; i<lenList; i++)
         {
             if(i%200==0)
             {
-                system("pause");
+                printf("\n");
+
                 auxiliarPunteroEmployee = (Employee*)ll_get(pArrayListEmployee,i);
+                system("pause");
 
                 if(auxiliarPunteroEmployee != NULL)
                 {

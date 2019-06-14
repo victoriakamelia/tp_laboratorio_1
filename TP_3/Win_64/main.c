@@ -41,6 +41,7 @@ int main()
             system("pause");
             break;
         case 3:
+            system("cls");
             if(!controller_addEmployee(listaEmpleados))
             {
                 printf("SE CARGO EMPLEADO CORRECTAMENTE.\n");
@@ -52,6 +53,7 @@ int main()
             system("pause");
             break;
         case 4:
+            system("cls");
             if(!controller_editEmployee(listaEmpleados))
             {
               printf("SE EDITO EMPLEADO CORRECTAMENTE.\n");
@@ -63,6 +65,7 @@ int main()
             system("pause");
             break;
         case 5:
+            system("cls");
             if(!controller_removeEmployee(listaEmpleados))
             {
               printf("SE ELIMINO EMPLEADO CORRECTAMENTE.\n");
@@ -74,6 +77,7 @@ int main()
 
             break;
         case 6:
+            system("cls");
             if(!controller_ListEmployee(listaEmpleados))
             {
                 printf(" \nLISTA EMPLEADOS.\n");
@@ -86,6 +90,7 @@ int main()
             system("pause");
             break;
         case 7:
+            system("cls");
             if(!controller_sortEmployee(listaEmpleados))
             {
                printf("SE ORDENARON EMPLEADOS CORRECTAMENTE.\n");
@@ -97,6 +102,7 @@ int main()
             system("pause");
             break;
         case 8:
+            system("cls");
             if(!controller_saveAsText("data.csv",listaEmpleados))
             {
               printf("SE GUARDARON EMPLEADOS EN ARCHIVO CSV.\n");
@@ -108,6 +114,7 @@ int main()
             system("pause");
             break;
         case 9:
+            system("cls");
             if(!controller_saveAsBinary("data.bin",listaEmpleados))
             {
                 printf("SE GUARDARON EMPLEADOS EN ARCHIVO BIN.\n");
